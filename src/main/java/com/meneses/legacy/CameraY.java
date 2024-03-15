@@ -10,7 +10,7 @@ public class CameraY {
     }
 
     public CameraFile getPhoto() {
-        CameraCommand command = new CameraCommand("token", 1, "file", 10);
+        CameraCommand command = new CameraCommand("token", 1, "file", "photo", 10);
         CameraCommandResult result = cameraService.sendCommand(command);
         return parseToFile(result);
     }

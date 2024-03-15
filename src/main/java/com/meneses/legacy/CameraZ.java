@@ -63,7 +63,7 @@ public class CameraZ {
         return parseToBoolean(result);
     }
 
-    public CameraFile getAudios() {
+    public CameraFile getAudio() {
         CameraCommand command = new CameraCommand("token", 1, "file", "audios", 10, 3);
         CameraCommandResult result = cameraService.sendCommand(command);
         return parseToFile(result);

@@ -8,10 +8,6 @@ public class CameraCommand {
     long fetchSize;
     long offset;
 
-    public CameraCommand() {
-
-    }
-
     public CameraCommand(String token, int code, String information, String type, long fetchSize, long offset) {
         this.token = token;
         this.code = code;

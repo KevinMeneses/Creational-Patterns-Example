@@ -1,10 +1,9 @@
 package com.meneses.legacy;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) {
         CameraService cameraService = new CameraService();
 
         System.out.println(
@@ -33,7 +32,7 @@ public class Main {
         }
     }
 
-    private static void continueWithCameraX(CameraX cameraX) throws IOException {
+    private static void continueWithCameraX(CameraX cameraX) {
         System.out.println(
                 "Que desea hacer:" +
                         " 1. Tomar foto"
@@ -50,7 +49,7 @@ public class Main {
         }
     }
 
-    private static void continueWithCameraY(CameraY cameraY) throws IOException, InterruptedException {
+    private static void continueWithCameraY(CameraY cameraY) {
         System.out.println(
                 "Que desea hacer:" +
                         " 1. Tomar foto" +
@@ -81,7 +80,7 @@ public class Main {
         System.out.println("Grabacion de video terminada: " + result);
     }
 
-    private static void continueWithCameraZ(CameraZ cameraZ) throws IOException, InterruptedException {
+    private static void continueWithCameraZ(CameraZ cameraZ) {
         System.out.println(
                 "Que desea hacer:" +
                         " 1. Tomar foto" +
