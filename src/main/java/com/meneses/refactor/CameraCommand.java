@@ -9,7 +9,11 @@ public class CameraCommand {
     long offset;
 
     public static class Builder {
-        private CameraCommand cameraCommand;
+        private final CameraCommand cameraCommand;
+
+        public Builder() {
+            this.cameraCommand = new CameraCommand();
+        }
 
         public Builder setToken(String token) {
             cameraCommand.token = token;
