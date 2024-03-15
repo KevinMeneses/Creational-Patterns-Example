@@ -35,11 +35,11 @@ public class Main {
 
         switch (action) {
             case 1:
-                result = camera.takePhoto();
+                result = ((Photo)camera).takePhoto();
                 System.out.println("Foto tomada: " + result);
                 break;
             case 2:
-                result = camera.startVideoRecording();
+                result = ((Video)camera).startVideoRecording();
                 if (result == null) {
                     System.out.println("Opcion no soportada");
                     break;
@@ -48,11 +48,11 @@ public class Main {
                 System.out.println("Grabacion de video iniciada: " + result);
                 System.out.println("Ingrese cualquier tecla para finalizar la grabación");
                 scanner.nextByte();
-                result = camera.stopVideoRecording();
+                result = ((Video)camera).stopVideoRecording();
                 System.out.println("Grabacion de video terminada: " + result);
                 break;
             case 3:
-                result = camera.startAudioRecording();
+                result = ((Audio)camera).startAudioRecording();
                 if (result == null) {
                     System.out.println("Opcion no soportada");
                     break;
@@ -61,7 +61,7 @@ public class Main {
                 System.out.println("Grabacion de audio iniciada: " + result);
                 System.out.println("Ingrese cualquier tecla para finalizar la grabación");
                 scanner.nextByte();
-                result = camera.stopAudioRecording();
+                result = ((Audio)camera).stopAudioRecording();
                 System.out.println("Grabacion de audio terminada: " + result);
                 break;
             default:

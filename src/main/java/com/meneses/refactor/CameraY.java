@@ -2,7 +2,7 @@ package com.meneses.refactor;
 
 import java.util.List;
 
-public class CameraY implements Camera {
+public class CameraY implements Photo, Video {
     private final CameraService cameraService;
 
     public CameraY(CameraService cameraService) {
@@ -103,25 +103,6 @@ public class CameraY implements Camera {
         return parseToBoolean(result);
     }
 
-    @Override
-    public CameraFile getAudio() {
-        return null;
-    }
-
-    @Override
-    public List<CameraFileMetadata> getAudiosMetadata() {
-        return null;
-    }
-
-    @Override
-    public Boolean startAudioRecording() {
-        return null;
-    }
-
-    @Override
-    public Boolean stopAudioRecording() {
-        return null;
-    }
 
     @Override
     public Boolean saveMetadata(CameraFileMetadata metadata) {
