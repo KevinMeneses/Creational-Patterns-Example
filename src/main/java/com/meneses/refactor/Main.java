@@ -61,7 +61,7 @@ public class Main {
                 System.out.println("Grabacion de audio iniciada: " + result);
                 System.out.println("Ingrese cualquier tecla para finalizar la grabación");
                 scanner.nextByte();
-                result = camera.stopVideoRecording();
+                result = camera.stopAudioRecording();
                 System.out.println("Grabacion de audio terminada: " + result);
                 break;
             default:
