@@ -9,14 +9,14 @@ public class CameraY {
         this.cameraService = cameraService;
     }
 
-    public List<CameraFile> getPhotos() {
-        CameraCommand command = new CameraCommand("token", 1, "file", "photo", 10);
+    public CameraFile getPhoto() {
+        CameraCommand command = new CameraCommand("token", 1, "file", 10);
         CameraCommandResult result = cameraService.sendCommand(command);
-        return parseToFileList(result);
+        return parseToFile(result);
     }
 
-    private List<CameraFile> parseToFileList(CameraCommandResult result) {
-        return List.of(new CameraFile());
+    private CameraFile parseToFile(CameraCommandResult result) {
+        return new CameraFile();
     }
 
     public List<CameraFileMetadata> getPhotosMetadata() {
@@ -39,10 +39,10 @@ public class CameraY {
         return true;
     }
 
-    public List<CameraFile> getVideos() {
+    public CameraFile getVideo() {
         CameraCommand command = new CameraCommand("token", 1, "file", "video", 10);
         CameraCommandResult result = cameraService.sendCommand(command);
-        return parseToFileList(result);
+        return parseToFile(result);
     }
 
     public List<CameraFileMetadata> getVideosMetadata() {
