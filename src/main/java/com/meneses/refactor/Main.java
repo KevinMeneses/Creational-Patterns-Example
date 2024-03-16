@@ -33,40 +33,34 @@ public class Main {
         int action = scanner.nextInt();
         Boolean result;
 
-        switch (action) {
-            case 1:
-                result = ((Photo)camera).takePhoto();
-                System.out.println("Foto tomada: " + result);
-                break;
-            case 2:
-                result = ((Video)camera).startVideoRecording();
-                if (result == null) {
+        try {
+            switch (action) {
+                case 1:
+                    result = ((Photo)camera).takePhoto();
+                    System.out.println("Foto tomada: " + result);
+                    break;
+                case 2:
+                    result = ((Video)camera).startVideoRecording();
+                    System.out.println("Grabacion de video iniciada: " + result);
+                    System.out.println("Ingrese cualquier tecla para finalizar la grabación");
+                    scanner.nextByte();
+                    result = ((Video)camera).stopVideoRecording();
+                    System.out.println("Grabacion de video terminada: " + result);
+                    break;
+                case 3:
+                    result = ((Audio)camera).startAudioRecording();
+                    System.out.println("Grabacion de audio iniciada: " + result);
+                    System.out.println("Ingrese cualquier tecla para finalizar la grabación");
+                    scanner.nextByte();
+                    result = ((Audio)camera).stopAudioRecording();
+                    System.out.println("Grabacion de audio terminada: " + result);
+                    break;
+                default:
                     System.out.println("Opcion no soportada");
                     break;
-                }
-
-                System.out.println("Grabacion de video iniciada: " + result);
-                System.out.println("Ingrese cualquier tecla para finalizar la grabación");
-                scanner.nextByte();
-                result = ((Video)camera).stopVideoRecording();
-                System.out.println("Grabacion de video terminada: " + result);
-                break;
-            case 3:
-                result = ((Audio)camera).startAudioRecording();
-                if (result == null) {
-                    System.out.println("Opcion no soportada");
-                    break;
-                }
-
-                System.out.println("Grabacion de audio iniciada: " + result);
-                System.out.println("Ingrese cualquier tecla para finalizar la grabación");
-                scanner.nextByte();
-                result = ((Audio)camera).stopAudioRecording();
-                System.out.println("Grabacion de audio terminada: " + result);
-                break;
-            default:
-                System.out.println("Opcion no soportada");
-                break;
+            }
+        } catch (ClassCastException exception) {
+            System.out.println("Opcion no soportada");
         }
     }
 }
