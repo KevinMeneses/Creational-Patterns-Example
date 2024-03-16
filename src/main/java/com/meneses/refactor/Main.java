@@ -35,7 +35,7 @@ public class Main {
 
         switch (action) {
             case 1:
-                result = ((Photo)camera).takePhoto();
+                result = ((Camera)camera).takePhoto();
                 System.out.println("Foto tomada: " + result);
                 break;
             case 2:

@@ -2,7 +2,7 @@ package com.meneses.refactor;
 
 import java.util.List;
 
-public interface Audio extends Camera {
+public interface Audio extends Video {
 
     CameraFile getAudio();
     List<CameraFileMetadata> getAudiosMetadata();

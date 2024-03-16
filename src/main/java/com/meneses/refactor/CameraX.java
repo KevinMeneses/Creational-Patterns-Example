@@ -2,7 +2,7 @@ package com.meneses.refactor;
 
 import java.util.List;
 
-public class CameraX implements Photo {
+public class CameraX implements Camera {
     private final CameraService cameraService;
 
     public CameraX(CameraService cameraService) {

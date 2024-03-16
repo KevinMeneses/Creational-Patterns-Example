@@ -2,7 +2,7 @@ package com.meneses.refactor;
 
 import java.util.List;
 
-public class CameraY implements Photo, Video {
+public class CameraY implements Camera, Video {
     private final CameraService cameraService;
 
     public CameraY(CameraService cameraService) {
